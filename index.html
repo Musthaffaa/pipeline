@@ -9,8 +9,18 @@
 <body>
     <div class="card">
         <h2>Hello, World!</h2>
-        <p>Click the button below to toggle the theme and experience interactive JavaScript.</p>
-        <button id="themeToggleBtn">Switch to Dark Mode</button>
+        <p>Choose a color theme from the dropdown below to customize your view.</p>
+        
+        <!-- Theme Selector Dropdown -->
+        <div class="theme-selector-wrapper">
+            <label for="themeSelect">Select Theme:</label>
+            <select id="themeSelect">
+                <option value="default">Default Light</option>
+                <option value="dark-mode">Dark Mode</option>
+                <option value="blue-mode">Ocean Blue</option>
+                <option value="emerald-mode">Emerald Green</option>
+            </select>
+        </div>
     </div>
 
     <script src="script.js"></script>
