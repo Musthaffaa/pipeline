@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Sample Page</title>
+    <title>Interactive Theme Selector</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="card">
         <h2>Hello, World!</h2>
-        <p>Choose a color theme from the dropdown below to customize your view.</p>
+        <p>Click a color button below to switch themes:</p>
         
-        <!-- Theme Selector Dropdown -->
-        <div class="theme-selector-wrapper">
-            <label for="themeSelect">Select Theme:</label>
-            <select id="themeSelect">
-                <option value="default">Default Light</option>
-                <option value="dark-mode">Dark Mode</option>
-                <option value="blue-mode">Ocean Blue</option>
-                <option value="emerald-mode">Emerald Green</option>
-            </select>
+        <!-- Color Theme Buttons -->
+        <div class="theme-buttons">
+            <button class="theme-btn" data-theme="default" style="background-color: #007bff;" title="Default Light"></button>
+            <button class="theme-btn" data-theme="dark-mode" style="background-color: #ffc107;" title="Dark Mode"></button>
+            <button class="theme-btn" data-theme="blue-mode" style="background-color: #38bdf8;" title="Ocean Blue"></button>
+            <button class="theme-btn" data-theme="emerald-mode" style="background-color: #34d399;" title="Emerald Green"></button>
         </div>
     </div>
 
