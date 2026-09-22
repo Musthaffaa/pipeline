@@ -1,16 +1,18 @@
-// Select DOM elements
-const themeSelect = document.getElementById('themeSelect');
+// Select all theme swatch buttons and the body element
+const themeButtons = document.querySelectorAll('.theme-btn');
 const bodyElement = document.body;
 
-// Listen for selection changes in the dropdown
-themeSelect.addEventListener('change', (event) => {
-    const selectedTheme = event.target.value;
+// Loop through each button and listen for a click
+themeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedTheme = button.getAttribute('data-theme');
 
-    // Clear all existing theme classes from the body
-    bodyElement.className = '';
+        // Clear all existing theme classes from the body
+        bodyElement.className = '';
 
-    // If a specific mode is selected (other than default), add it as a class
-    if (selectedTheme !== 'default') {
-        bodyElement.classList.add(selectedTheme);
-    }
+        // If it's not the default theme, add the corresponding class
+        if (selectedTheme !== 'default') {
+            bodyElement.classList.add(selectedTheme);
+        }
+    });
 });
