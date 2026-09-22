@@ -1,16 +1,16 @@
 // Select DOM elements
-const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeSelect = document.getElementById('themeSelect');
 const bodyElement = document.body;
 
-// Listen for button clicks
-themeToggleBtn.addEventListener('click', () => {
-    // Toggle the 'dark-mode' class on the body
-    bodyElement.classList.toggle('dark-mode');
+// Listen for selection changes in the dropdown
+themeSelect.addEventListener('change', (event) => {
+    const selectedTheme = event.target.value;
 
-    // Update button text based on current mode
-    if (bodyElement.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = 'Switch to Light Mode';
-    } else {
-        themeToggleBtn.textContent = 'Switch to Dark Mode';
+    // Clear all existing theme classes from the body
+    bodyElement.className = '';
+
+    // If a specific mode is selected (other than default), add it as a class
+    if (selectedTheme !== 'default') {
+        bodyElement.classList.add(selectedTheme);
     }
 });
